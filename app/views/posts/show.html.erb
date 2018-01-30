@@ -1,5 +1,5 @@
 <h1> <%= @post.title %></h1>
-<%= @post.categories.each do |c| %>
+<% @post.categories.each do |c| %>
   <%= c.name %>
 <% end %>
 <%= @post.content %>
