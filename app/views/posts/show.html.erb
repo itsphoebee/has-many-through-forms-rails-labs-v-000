@@ -10,7 +10,7 @@
 <% end %>
 </ul>
 
-<% if !@posts.comments.empty?%>
+<% if @posts.comments.empty? == false%>
   The users below have commented on this post:
   <%list = @post.users.map{|u| u}.uniq%>
   <% list.each do |u|%>
