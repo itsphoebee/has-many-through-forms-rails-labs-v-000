@@ -13,14 +13,13 @@
 </ul>
 
 <h3> The users below have commented on this post: </h3>
-<%list = @post.users.map{|u| u}.uniq%>
-<% list.each do |u|%>
-<%= link_to u.username, user_path(u)%>
+<%@post.users.uniq do |u|%>
+  <%= link_to u.username, user_path(u)%>
 <% end %>
 
 <h3> Leave a comment below: </h3>
 
-<%= form_for @post.comment do |f| %>
+<%= form_for @comment do |f| %>
 Select a user:<br>
   <%= f.label :users %>
   <%= f.collection_select :user_id, User.all, :id, :username %><br>
