@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = @post.comments.build
-    @user = @comment.build_user
+    @user = @comment.find_or_create_by(username: user_attributes:[:username])
   end
 
   def index
