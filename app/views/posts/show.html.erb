@@ -22,6 +22,6 @@ Leave a comment below:
   <%= f.collection_select :user, User.all, :id, :username %>
   <%= f.label "Content" %>
   <%= f.text_field :content %>
-  <%= f.hidden_field :post_id  %>
+  <%= f.hidden_field :post_id %>
   <%= f.submit %>
 <% end %>
