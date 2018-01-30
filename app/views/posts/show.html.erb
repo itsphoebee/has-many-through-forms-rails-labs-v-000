@@ -24,10 +24,10 @@
 Select a user:
   <%= f.label :users %>
   <%= f.collection_select :user_id, User.all, :id, :username %>
-Or create one: 
+Or create one:
   <%= f.fields_for :user, @user do |user_attributes|%>
     <%= user_attributes.text_field :username %>
-    <% end %>
+  <% end %>
 
   <%= f.label :comment %>
   <%= f.text_field :content %>
