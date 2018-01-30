@@ -17,7 +17,7 @@ The users below have commented on this post:
 <% end %>
 
 Leave a comment below:
-<%= form_for @comment do |f| %>
+<%= form_for @post do |f| %>
   <%= f.label "User" %>
   <%= f.collection_select :username, User.all, :id, :name %>
   <%= f.label "Content" %>
