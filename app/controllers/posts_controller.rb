@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
-    @user = @comment.build_user
+
   end
 
   def index
