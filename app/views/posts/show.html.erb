@@ -13,7 +13,7 @@
 </ul>
 
 <h3> The users below have commented on this post: </h3>
-<%@post.users.uniq do |u|%>
+<%@post.users.uniq.each do |u|%>
   <%= link_to u.username, user_path(u)%>
 <% end %>
 
