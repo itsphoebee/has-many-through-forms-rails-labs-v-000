@@ -10,12 +10,13 @@
 <% end %>
 </ul>
 
-The users below have commented on this post:
-<%list = @post.users.map{|u| u}.uniq%>
-<% list.each do |u|%>
-<%= link_to u.username, user_path(u)%>
+<% if !@posts.comments.empty%>
+  The users below have commented on this post:
+  <%list = @post.users.map{|u| u}.uniq%>
+  <% list.each do |u|%>
+  <%= link_to u.username, user_path(u)%>
+  <% end %>
 <% end %>
-
 Leave a comment below:
 
 <%= form_for @comment do |f| %>
