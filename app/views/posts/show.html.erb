@@ -5,7 +5,7 @@
 <ul>
 <% @post.comments.each do |c| %>
   <li>
-    <%=c.user.username%> says:<%=c.content%>
+    <%=c.user.username%> says: <%=c.content%>
   </li>
 <% end %>
 </ul>
