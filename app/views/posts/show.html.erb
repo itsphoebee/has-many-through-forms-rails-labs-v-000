@@ -23,11 +23,11 @@
 <%= form_for @comment do |f| %>
 Select a user:
   <%= f.label :users %>
-  <%= f.collection_select :user_id, User.all, :id, :username %>
+  <%= f.collection_select :user_id, User.all, :id, :username %><br>
 Or create one:
   <%= f.fields_for :user, @user do |user_attributes|%>
     <%= user_attributes.text_field :username %>
-  <% end %>
+  <% end %> <br>
 
   <%= f.label :comment %>
   <%= f.text_field :content %>
