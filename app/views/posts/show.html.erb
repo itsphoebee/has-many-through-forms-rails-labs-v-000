@@ -21,9 +21,10 @@
 <h3> Leave a comment below: </h3>
 
 <%= form_for @comment do |f| %>
+Select a user:
   <%= f.label :users %>
   <%= f.collection_select :user_id, User.all, :id, :username %>
-
+Or create one: 
   <%= f.fields_for :user, @user do |user_attributes|%>
     <%= user_attributes.text_field :username %>
     <% end %>
