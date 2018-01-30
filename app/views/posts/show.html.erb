@@ -2,7 +2,7 @@
 <% @post.categories.each do |c| %>
   <%= c.name %>
 <% end %>
-<%= @post.content %>
+<p> <%= @post.content %> </p>
 
 <ul>
 <% @post.comments.each do |c| %>
