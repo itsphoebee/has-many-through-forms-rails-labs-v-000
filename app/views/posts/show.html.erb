@@ -1,6 +1,6 @@
 <h1> <%= @post.title %></h1>
 <% @post.categories.each do |c| %>
-  <%= c.name %>
+  <h2><%= c.name %></h2>
 <% end %>
 <p> <%= @post.content %> </p>
 
