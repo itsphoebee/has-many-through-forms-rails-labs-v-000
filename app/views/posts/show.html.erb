@@ -21,8 +21,8 @@ Leave a comment below:
 <%= form_for @comment do |f| %>
   <%= f.label :users %>
   <%= f.collection_select :user, User.all, :id, :username %>
-  
-  <%= f.label :content %>
+
+  <%= f.label :comment %>
   <%= f.text_field :content %>
   <%= f.hidden_field :post_id %>
   <%= f.submit %>
